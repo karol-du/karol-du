@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Calm | Quiz</title>
+    <style>
+      .navibar {
+        background-color: #19092e;
+        overflow: hidden;
+        margin-top: 0;
+      }
+
+      .navibar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .navibar a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .navibar a.active {
+        background-color: rgb(52, 14, 86);
+        color: white;
+      }
+      body {
+        background-image: url("l.jpeg");
+        background-repeat: none;
+        background-size: cover;
+        cursor: url("https://cur.cursors-4u.net/nature/nat-10/nat996.cur"), auto;
+
+        a:hover {
+          cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym599.cur"),
+            pointer;
+        }
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      h4 {
+        color: white;
+      }
+
+      label {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navibar">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="Planets.html">Planets</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <form id="quizForm">
+      <ol>
+        <hr />
+        <p style="color: white">
+          Question 1: What is a common feeling associated with depression?
+        </p>
+        <label><input type="radio" name="q1" value="a" /> Happiness</label
+        ><br />
+        <label><input type="radio" name="q1" value="b" /> Emptiness</label
+        ><br />
+        <label><input type="radio" name="q1" value="c" /> Satisfaction</label
+        ><br />
+        <label><input type="radio" name="q1" value="d" /> Hope</label
+        ><br />
+
+        <hr />
+        <p style="color: white">
+          Question 2: Can ADHD affect academic performance?
+        </p>
+        <label><input type="radio" name="q2" value="a" /> Yes</label
+        ><br />
+        <label><input type="radio" name="q2" value="b" /> No</label
+        ><br />
+
+        <hr />
+        <p style="color: white">
+          Question 3: What biological gender is more likely to experience OCD?
+        </p>
+        <label><input type="radio" name="q3" value="a" /> Male</label
+        ><br />
+        <label><input type="radio" name="q3" value="b" /> Female</label
+        ><br />
+        <label><input type="radio" name="q3" value="c" /> Neither</label
+        ><br />
+        <label
+          ><input type="radio" name="q3" value="d" /> They have the same
+          probability</label
+        ><br />
+        <hr />
+
+        <p style="color: white">
+          Question 4: What is the most common mental disorder?
+        </p>
+        <label><input type="radio" name="q4" value="a" /> Depression</label
+        ><br />
+        <label><input type="radio" name="q4" value="b" /> ADHD</label
+        ><br />
+        <label><input type="radio" name="q4" value="c" /> OCD</label
+        ><br />
+        <label><input type="radio" name="q4" value="d" /> Anxiety</label
+        ><br />
+        <hr />
+        <p style="color: white">
+          Question 5: What age range does anxiety typically begin in?
+        </p>
+        <label><input type="radio" name="q5" value="a" /> Infancy</label
+        ><br />
+        <label><input type="radio" name="q5" value="b" /> Adolescence</label
+        ><br />
+        <label><input type="radio" name="q5" value="c" /> Late adulthood</label
+        ><br />
+        <label><input type="radio" name="q5" value="d" /> Elderly</label
+        ><br />
+        <hr />
+      </ol>
+
+      <button type="button" onclick="checkQuiz()">Check answers</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script>
+      function checkQuiz() {
+        let score = 0;
+        const form = document.getElementById("quizForm");
+        const resultsDiv = document.getElementById("results");
+
+        const correctAnswers = {
+          q1: "b",
+          q2: "a",
+          q3: "b",
+          q4: "d",
+          q5: "b",
+        };
+
+        for (let i = 1; i <= 5; i++) {
+          const selected = form.querySelector(`input[name=q${i}]:checked`);
+          if (selected) {
+            if (selected.value === correctAnswers[`q${i}`]) {
+              score++;
+            }
+          }
+        }
+        resultsDiv.innerHTML = `You got ${score} out of 5 questions correct.`;
+        resultsDiv.style.color = "white";
+      }
+    </script>
+  </body>
+</html>

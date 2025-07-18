@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmic Calm | About Us</title>
+    <style>
+      .navibar {
+        background-color: #19092e;
+        overflow: hidden;
+        margin-top: 0;
+      }
+
+      .navibar a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .navibar a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .navibar a.active {
+        background-color: rgb(52, 14, 86);
+        color: white;
+      }
+      body {
+        background-image: url("l.jpeg");
+        background-repeat: none;
+        background-size: cover;
+        cursor: url("https://cur.cursors-4u.net/nature/nat-10/nat996.cur"), auto;
+
+        a:hover {
+          cursor: url("https://cur.cursors-4u.net/symbols/sym-6/sym599.cur"),
+            pointer;
+        }
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        margin:0;
+        padding: 0;
+      }
+      h4 {
+        color: white;
+      }
+      label {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navibar">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="Planets.html">Planets</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="FAQ.html">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="about-us-container">
+      <div class="card">
+        <img src="karol.png" width="250">
+        <h3 style="color: white">Karol Du</h3>
+        <p style="color: #e6e1d3">
+          Age: 13 years old <br />
+          Country: United States <br />
+          I'm a rising 8th grader in New Jersey. Someday, I hope to pursue a
+          double major in math and computer science. In my free time, I
+          enjoy baking, swimming, competing in math tournaments, and listening
+          to music.
+        </p>
+        <a href="kd.butterfly.8@gmail.com" class="contact">Contact</a>
+      </div>
+      <div class="card">
+        <img src="deniz.png" width="225">
+        <h3 style="color: white">Deniz Gürelli</h3>
+        <p style="color: #e6e1d3">
+          Age: 18 years old <br />
+          Country: Turkey <br />
+          I am going to start university this year, where I will be studying
+          medicine with aspirations of becoming a cardiothoracic surgeon. My
+          passions are chemistry, painting, reading, and playing the violin.
+        </p>
+        <a href="denizsenagurelli@gmail.com" class="contact">Contact</a>
+      </div>
+      <div class="card">
+        <img src="abishagi.png" width="225">
+        <h3 style="color: white">Abishag Ishaku</h3>
+        <p style="color: #e6e1d3">
+          Age: 17 years old <br />
+          Country: Nigeria <br />
+          I like to crochet, cook, read and watch movies. I want to study
+          mechatronics engineering in university with interests in
+          biomedical/aerospace/automotive engineering.
+        </p>
+        <a href="naomi.yusuf2007@gmail.com" class="contact">Contact</a>
+      </div>
+    </div>
+  </body>
+  <div class="about-us-container">
+    <div class="card">
+      <img src="blankpfp.jpg" width="225">
+      <h3 style="color: white">Sama Moghazy</h3>
+      <p style="color: #e6e1d3">
+        Age: 17 years old <br />
+        Country: Egypt <br />
+        I plan to study computer science at university, with the goal of
+        becoming a cybersecurity specialist. I'm passionate about technology,
+        problem-solving, and creative design. In my free time, I enjoy
+        studying languages.
+      </p>
+      <a href="samawaleedmoghazy@gmail.com" class="contact">Contact</a>
+    </div>
+    <div class="card">
+      <img src="noor.png" width="225">
+      <h3 style="color: white">Noor Hanafi</h3>
+      <p style="color: #e6e1d3">
+        Age: 16 years old <br />
+        Country: Egypt <br />
+        I'm a rising junior who loves experiments and art in general where i see everything as art from math and its basics to the universe we live, I aspire to be one of three things a cybersecurity engineer or a pentester, a biomedical engineer, or a software engineer but the thing that is in my mind the most is cybersecurity engineering as I'm studying it right now  + my fav quote is: no risk no fun! </p>
+      <a href="nourehab5050@gmail.com" class="contact">Contact</a>
+    </div>
+
+</html>
+
+<style>
+  .about-us-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .card {
+    width: 300px;
+    background-color: #484090;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .card h3 {
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  .card p {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .contact {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .contact:hover {
+    background-color: #0056b3;
+  }
+</style>
